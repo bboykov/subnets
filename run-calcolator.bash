@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+IFS=$'\n\t'
+
 local_port="5001"
 container_name="subnets"
 docker run -d --rm -p "${local_port}":80 --name ${container_name} ${container_name}
